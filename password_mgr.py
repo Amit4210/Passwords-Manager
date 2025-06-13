@@ -19,13 +19,6 @@ key = load_key() # mstr_pwd.encode()
 fer = Fernet(key) # initializing the encryption module
 
 
-def load_key():
-    file = open('key.key', 'rb')
-    key = file.read()
-    file.close()
-    return key
-
-
 def view():
     with open('passwords.txt', 'r') as f:
         for line in f.readlines():
